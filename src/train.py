@@ -14,7 +14,7 @@ def train_model():
     os.makedirs("Models", exist_ok=True)
     
     # Set MLflow tracking URI to local file storage
-    mlflow.set_tracking_uri("file:///./mlruns")
+    mlflow.set_tracking_uri("file:./mlruns")
     
     # Start MLflow run
     with mlflow.start_run():

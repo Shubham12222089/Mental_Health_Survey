@@ -48,3 +48,5 @@ jobs:
           python src/preprocess.py
           python src/train.py
           python src/evaluate.py
+        env:
+          MLFLOW_TRACKING_URI: file:./mlruns
