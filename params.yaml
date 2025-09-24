@@ -1,0 +1,9 @@
+# Simple configuration for Mental Survey ML Pipeline
+
+# Model parameters
+n_estimators: 100
+max_depth: 10
+random_state: 42
+
+# Data parameters
+test_size: 0.2

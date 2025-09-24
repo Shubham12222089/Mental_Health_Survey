@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/0/fd798443bf1b4d6793198b90e9a4ac96/artifacts
+end_time: 1758737287816
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: fd798443bf1b4d6793198b90e9a4ac96
+run_name: bedecked-wolf-348
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1758737248322
+status: 4
+tags: []
+user_id: shubh
