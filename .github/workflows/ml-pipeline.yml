@@ -22,6 +22,27 @@ jobs:
         run: |
           pip install -r requirements.txt
       
+      - name: Create directories and sample data
+        run: |
+          mkdir -p data/raw data/processed Models metrics
+          python -c "
+          import pandas as pd
+          import numpy as np
+          np.random.seed(42)
+          data = {
+              'Age': np.random.randint(18, 80, 1000),
+              'Gender': np.random.choice(['Male', 'Female'], 1000),
+              'family_history': np.random.choice([0, 1], 1000),
+              'work_interfere': np.random.choice(['Never', 'Rarely', 'Sometimes', 'Often'], 1000),
+              'remote_work': np.random.choice([0, 1], 1000),
+              'benefits': np.random.choice(['Yes', 'No'], 1000),
+              'treatment': np.random.choice([0, 1], 1000)
+          }
+          df = pd.DataFrame(data)
+          df.to_csv('data/raw/survey_data.csv', index=False)
+          print('Sample data created')
+          "
+      
       - name: Run ML Pipeline
         run: |
           python src/preprocess.py
